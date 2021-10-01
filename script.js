@@ -17,9 +17,18 @@ lowerCaseBtn.addEventListener("click", function (){
 });
 
 properCaseBtn.addEventListener("click", function() {
-
+  let arrayFromString = textArea.value.split(" ");
+  for (let i = 0; i < arrayFromString.length; i++) {
+    arrayFromString[i] = arrayFromString[i][0].toUpperCase() + arrayFromString[i].substr(1);
+  };
+  textArea.value = arrayFromString.join(" ");
 });
 
 sentenceCaseBtn.addEventListener("click", function() {
-
+  let arrayFromString = textArea.value.split(". ");
+  console.log(arrayFromString);
+  for (let i = 0; i < arrayFromString.length; i++) {
+    arrayFromString[i] = arrayFromString[i][0].toUpperCase() + arrayFromString[i].substr(1);
+  };
+  textArea.value = arrayFromString.join(". ");
 });
